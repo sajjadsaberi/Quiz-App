@@ -90,3 +90,22 @@ h3 {
     background-color: #eeedfb;
     border: 2px solid var(--whiteColor);
 }
+
+#next-button,
+#finish-button {
+    color: var(--bgColor);
+    font-size: 1rem;
+    background-color: #eeedfb;
+    border: 2px solid var(--bgColor);
+    border-radius: 15px;
+    padding: 8px 15px;
+    margin: 20px 20px 0 0;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+#next-button:hover,
+#finish-button:hover {
+    background-color: var(--bgColor);
+    color: var(--whiteColor);
+}
