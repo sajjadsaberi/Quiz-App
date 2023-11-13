@@ -25,7 +25,7 @@
 }
 
 #container {
-    display: block;
+    display: none;
     width: 700px;
 }
 
@@ -99,7 +99,7 @@ h3 {
     border: 2px solid var(--bgColor);
     border-radius: 15px;
     padding: 8px 15px;
-    margin: 20px 20px 0 0;
+    margin: 20px 20px 20px 0;
     cursor: pointer;
     transition: all 0.2s ease-in;
 }
