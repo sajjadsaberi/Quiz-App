@@ -1,6 +1,8 @@
 :root {
     --bgColor: #6757d9 ;
     --whiteColor: #fff;
+    --correct : #5bd7bc ;
+    --inCorrect: #fe6681 ;
 }
 
 
@@ -110,3 +112,20 @@ h3 {
     background-color: var(--bgColor);
     color: var(--whiteColor);
 }
+
+.correct {
+    background-color: var(--correct);
+}
+
+.incorrect {
+    background-color: var(--inCorrect);
+}
+
+.correct:hover {
+    background-color: var(--correct);
+}
+
+.incorrect:hover {
+    background-color: var(--inCorrect);
+}
+
