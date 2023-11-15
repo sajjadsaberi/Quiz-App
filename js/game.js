@@ -65,7 +65,7 @@ const nextHandler = () => {
         showQuestion();
     } else {
         nextButton.style.display = "none" ;
-        window.location.assign("./end.html") ;
+        finishHandler();
     };
 };
 
@@ -75,8 +75,15 @@ const removeClasses = () => {
     });
 };
 
+const finishHandler = () => {
+    localStorage.setItem("score", JSON.stringify(score));
+    window.location.assign("./end.html") ;
+}
+
+
 window.addEventListener("load", fetchData) ;
 nextButton.addEventListener("click", nextHandler) ;
+finishButton.addEventListener("click", finishHandler) ;
 answerList.forEach((button, index) => {
     const Handler = (event) => {checkAnswer(event, index)}
     button.addEventListener("click", Handler) ;
