@@ -5,6 +5,8 @@ const container = document.getElementById("container") ;
 const questionText = document.getElementById("question-text");
 const answerList = document.querySelectorAll(".answer-text");
 const scoreText = document.getElementById("score") ;
+const nextButton = document.getElementById("next-button") ;
+const finishButton = document.getElementById("finish-button") ;
 
 const CORRECT_BONUS = 10 ;
 
@@ -41,7 +43,7 @@ const showQuestion = () => {
 const checkAnswer = (event, index) => {
     if(!isAccepted) return ;
     isAccepted = false ;
-    
+
     const isCorrect = index === correctAnswer ? true : false ;
     if(isCorrect) {
         event.target.classList.add("correct") ;
@@ -53,7 +55,13 @@ const checkAnswer = (event, index) => {
     };
 };
 
+const nextHandler = () => {
+    questionIndex++ ;
+    showQuestion();
+};
+
 window.addEventListener("load", fetchData) ;
+nextButton.addEventListener("click", nextHandler) ;
 answerList.forEach((button, index) => {
     const Handler = (event) => {checkAnswer(event, index)}
     button.addEventListener("click", Handler) ;
