@@ -1,4 +1,5 @@
 import formatData from "./helper.js";
+import Hello from "./End.js";
 
 const loader = document.getElementById("loader");
 const container = document.getElementById("container") ;
@@ -66,6 +67,7 @@ const nextHandler = () => {
     } else {
         nextButton.style.display = "none" ;
         finishHandler();
+        Hello();
     };
 };
 
